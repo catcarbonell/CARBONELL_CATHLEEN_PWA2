@@ -1,0 +1,164 @@
+/* Cathleen Carbonell
+PWA 2 02/2015 */
+
+/* FONTS */
+
+@import url(http://fonts.googleapis.com/css?family=Jura);
+
+/* GLOBAL STYLES */
+
+body {
+    background: #fff;
+    color: #333;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/* HEADERS */
+
+h1 {
+    font-family: 'Jura', Arial, sans-serif;
+    font-size: 3em;
+    color: #75231F;
+    padding: 5px;
+    margin: 5px;
+}
+
+h2 {
+    font-family: 'Jura', Arial, sans-serif;
+    font-size: 2em;
+    color: #e4bc4c;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* LINKS */
+
+a:link, a:visited {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+    color: #74231F;
+}
+
+a:hover {
+    color: #FFCC33;
+}
+
+
+/* CONTAINERS */
+
+#container {
+    width: 960px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #efefef;
+}
+
+#reg {
+    width: 960px;
+    margin: 0 auto;
+    background: #efefef;
+}
+
+#userinfo {
+    width: 350px;
+}
+
+
+/* P CLASSES */
+
+.clear {
+    clear: both;
+}
+
+.blurb {
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+/* LIST STYLES */
+#reg li {
+    list-style: none;
+}
+
+/* IMAGES */
+
+#logo {
+    border: 0;
+    padding: 5px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+#logodash {
+    width: 200px;
+    float: left;
+}
+
+#star {
+    border: 0;
+    padding: 5px;
+    float: right;
+}
+
+#profilepic {
+    width: 50px;
+}
+
+
+
+/* FORM/BUTTON STYLES */
+
+.signin {
+    font-family: Jura, Tahoma, sans-serif;
+    font-size: 2em;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #75231F;
+}
+
+.mainbtn {
+    background-color: #8e2b2b;
+    color: #fff;
+    border-radius: 18px;
+    font-family: 'Jura', Arial, sans-serif;
+    font-size: 2em;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    border: 5px solid #75231F;
+}
+
+.mainbtn:hover {
+    border: 5px solid #e4bc4c;
+    background-color: #FFCC33;
+    color: #333;
+}
+
+.menubtn {
+    background-color: #8e2b2b;
+    color: #fff;
+    border-radius: 18px;
+    font-family: 'Jura', Arial, sans-serif;
+    font-size: 1em;
+    padding: 1px;
+    margin: 1px;
+    width: 100px;
+    border: 2px solid #75231F;
+}
+
+.menubtn:hover {
+    border: 2px solid #e4bc4c;
+    background-color: #FFCC33;
+    color: #333;
+}
