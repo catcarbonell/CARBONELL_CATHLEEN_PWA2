@@ -34,18 +34,19 @@
 <body>
     <div id="container">
 
-        <form id="reg">
+        <form method="get" id="reg">
             <img src="images/logo2.png" id="logo" />
             <h1>Registration</h1>
             <ul>
 
-                <li><input type="email" value="email" class="signin" /></li>
-                <li><input type="text" value="name" class="signin" /></li>
-                <li><input type="text" value="username" class="signin" /></li>
-                <li><input type="text" value="password" class="signin" /></li>
-                <li><input type="text" value="re-type password" class="signin" /></li>
+                <li><input type="email" name="useremail" value="email" class="signin" /></li>
+                <li><input type="text" name="realname" value="name" class="signin" /></li>
+                <li><input type="text" name="username" value="username" class="signin" /></li>
+                <li><input type="text" name="password" value="password" class="signin" /></li>
+                <li><input type="text" name="retype" value="re-type password" class="signin" /></li>
+                <li> <input type="checkbox" name="terms" value="terms">I agree to the <a href="/">terms & conditions</a></li>
 
-                <button class="mainbtn">Sign up!</button>
+                <li><button class="mainbtn">Sign up!</button></li>
             </ul>
         </form>
 
