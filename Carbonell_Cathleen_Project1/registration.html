@@ -39,14 +39,27 @@
             <h1>Registration</h1>
             <ul>
 
-                <li><input type="email" name="useremail" value="email" class="signin" /></li>
+                <li><input type="email" name="useremail" value="email" class="signin" autofocus required /></li>
+
                 <li><input type="text" name="realname" value="name" class="signin" /></li>
-                <li><input type="text" name="username" value="username" class="signin" /></li>
-                <li><input type="text" name="password" value="password" class="signin" /></li>
-                <li><input type="text" name="retype" value="re-type password" class="signin" /></li>
+
+                <li><input type="text" name="username" value="username" class="signin" autofocus required /></li>
+
+                <li>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" value="password" class="signin" autofocus required />
+                </li>
+
+
+                <li>
+                    <label for="retype">Confirm Password</label>
+                    <input type="password" name="retype" id="retype" value="password" class="signin" autofocus required />
+                </li>
+
+
                 <li>Account Type: <label for="team">Team/Company</label><input type="radio" id="team" name="type" />
                     <label for="personal">Personal</label><input type="radio" id="personal" name="type" /></li>
-                <li> <input type="checkbox" name="terms" value="terms">I agree to the <a href="/">terms & conditions</a></li>
+                <li> <input type="checkbox" name="terms" value="terms" autofocus required>I agree to the <a href="/">terms & conditions</a></li>
 
                 <li><button class="mainbtn">Sign up!</button></li>
             </ul>
