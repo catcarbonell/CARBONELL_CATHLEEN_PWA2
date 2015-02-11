@@ -46,7 +46,7 @@
                 <li><input type="text" name="username" value="username" class="signin" autofocus required /></li>
 
                 <li>
-                    <h2><label for="password">Password</label></h2>
+                    <h3><label for="password">Password</label></h3>
                 </li>
 
                 <li>
@@ -55,15 +55,20 @@
 
 
                 <li>
-                    <h2><label for="retype">Confirm Password</label></h2>
+                    <h3><label for="retype">Confirm Password</label></h3>
                 </li>
                 <li>
                     <input type="password" name="retype" id="retype" value="password" class="signin" autofocus required />
                 </li>
 
 
-                <li>Account Type: <label for="team">Team/Company</label><input type="radio" id="team" name="type" />
-                    <label for="personal">Personal</label><input type="radio" id="personal" name="type" /></li>
+                <li>
+                    <h3>Account Type:</h3>
+                    <label for="team" class="blurb">Team/Company</label><input type="radio" id="team" name="type" />
+
+                    <label for="personal" class="blurb">Personal</label><input type="radio" id="personal" name="type" />
+                </li>
+                
                 <li> <input type="checkbox" name="terms" value="terms" autofocus required>I agree to the <a href="/">terms & conditions</a></li>
 
                 <li><button class="mainbtn" type="submit">Sign up!</button></li>
