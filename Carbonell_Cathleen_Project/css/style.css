@@ -85,6 +85,7 @@ nav {
 nav li {
     display: inline-block;
     list-style: none;
+    margin-right: 10px;
 }
 
 
@@ -101,7 +102,7 @@ nav a:hover {
 
 #userinfo {
     display: inline-block;
-    width: 250px;
+    width: 300px;
     margin-top: -65px;
 }
 
