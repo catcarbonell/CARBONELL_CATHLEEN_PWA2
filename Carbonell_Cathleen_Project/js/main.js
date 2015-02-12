@@ -4,8 +4,9 @@
 */
 
 (function($){
-	/* ======= TOOL TIP ======= */
     //$(document).ready(function(){
+	/* ======= TOOL TIP ======= */
+
 
         $('.masterToolTip').hover(function(){
         //Hover code

@@ -49,7 +49,7 @@ h3 {
     margin: 0 auto;
 }
 
-/* LINKS */
+/* GLOBAL LINKS */
 
 a:link, a:visited {
     font-family: Tahoma, sans-serif;
@@ -59,6 +59,35 @@ a:link, a:visited {
 
 a:hover {
     color: #FFCC33;
+}
+
+/* NAV/DASHBOARD */
+nav {
+    display: inline-block;
+    width: 700px;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+
+nav a:link, a:visited {
+    font-family: 'Jura', Arial, sans-serif;
+    font-size: 2em;
+    color: #74231F;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e4bc4c;
+}
+
+#userinfo {
+    display: inline-block;
+    width: 250px;
+    margin-top: -65px;
 }
 
 
@@ -77,9 +106,6 @@ a:hover {
     background: #efefef;
 }
 
-#userinfo {
-    width: 200px;
-}
 
 
 /* P CLASSES */
@@ -189,6 +215,6 @@ a:hover {
     border-radius: 5px;
     border: 1px solid #fff;
     font-family: Tahoma, sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     color: #fff;
 }
