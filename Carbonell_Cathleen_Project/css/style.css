@@ -183,6 +183,12 @@ a:hover {
 .tooltip {
     display: none;
     position: absolute;
-    background: #FFCC33;
-    border-radius: 18px;
+    width: 200px;
+    padding: 20px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-family: Tahoma, sans-serif;
+    font-size: 10px;
+    color: #fff;
 }

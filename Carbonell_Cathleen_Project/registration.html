@@ -42,26 +42,30 @@
                     <h3><label for="useremail">Email</label></h3>
                 </li>
 
-                <li><input type="email" name="useremail" id="useremail" value="name@domain.com" class="formbox" autofocus required /></li>
+                <li><input type="email" name="useremail" id="useremail" value="name@domain.com" class="formbox masterToolTip"
+                     title="Enter your email address! Promise we won't spam." autofocus required /></li>
 
                 <li>
                     <h3><label for="realname">Name</label></h3>
                 </li>
 
-                <li><input type="text" name="realname" id="realname" value="name" class="formbox" /></li>
+                <li><input type="text" name="realname" id="realname" value="name" class="formbox masterToolTip"
+                    title="Enter your real name! First, Last. Or just First."/></li>
 
                 <li>
                     <h3><label for="username">Username</label></h3>
                 </li>
 
-                <li><input type="text" name="username" id="username" value="username" class="formbox" autofocus required /></li>
+                <li><input type="text" name="username" id="username" value="username" class="formbox masterToolTip"
+                    title="6-16 characters; numbers/letters, no special characters. Sorry." autofocus required /></li>
 
                 <li>
                     <h3><label for="password">Password</label></h3>
                 </li>
 
                 <li>
-                    <input type="password" name="password" id="password" value="password" class="formbox" autofocus required />
+                    <input type="password" name="password" id="password" value="password" class="formbox masterToolTip"
+                    title="At least 6 characters; special characters, welcome!" autofocus required />
                 </li>
 
 
@@ -69,18 +73,22 @@
                     <h3><label for="retype">Confirm Password</label></h3>
                 </li>
                 <li>
-                    <input type="password" name="retype" id="retype" value="password" class="formbox" autofocus required />
+                    <input type="password" name="retype" id="retype" value="password" class="formbox masterToolTip"
+                    title="Just making sure you *really* want to use that password." autofocus required />
                 </li>
 
 
                 <li>
                     <h3>Account Type:</h3>
-                    <label for="team" class="blurb">Team/Company</label><input type="radio" id="team" name="type" />
+                    <label for="team" class="blurb">Team/Company</label><input type="radio" id="team" name="type"
+                    title="You must pay a bit extra for this. But it's worth it!" />
 
-                    <label for="personal" class="blurb">Personal</label><input type="radio" id="personal" name="type" />
+                    <label for="personal" class="blurb">Personal</label><input type="radio" id="personal" name="type"
+                    title="Personal projects and tasks for one person!"/>
                 </li>
 
-                <li><input type="checkbox" name="terms" value="terms" autofocus required>I agree to the <a href="/">terms & conditions</a></li>
+                <li><input type="checkbox" id="terms" name="terms" value="terms" class="masterToolTip"
+                    title="Please click this box for legal reasons." autofocus required /><label for="terms">I agree to the <a href="/">terms & conditions</a></label></li>
 
                 <li><button class="mainbtn" type="submit">Sign up!</button></li>
             </ul>
@@ -90,16 +98,19 @@
 
 
 
-	
-	
-	<!-- jquery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<!-- plugins -->
 
-	
-	<!-- main -->
-	<script type="text/javascript" src="js/main.js"></script>
-  
+
+    <!-- jquery -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- plugins -->
+
+
+    <!-- main -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
 </body>
 </html>
 
