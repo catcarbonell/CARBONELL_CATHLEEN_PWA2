@@ -78,7 +78,7 @@ a:hover {
 }
 
 #userinfo {
-    width: 350px;
+    width: 200px;
 }
 
 
@@ -122,16 +122,20 @@ a:hover {
     width: 45px;
 }
 
-/* FORM/BUTTON STYLES */
+/* INPUT STYLES */
 
-.signin {
+.formbox {
     font-family: Jura, Tahoma, sans-serif;
     font-size: 2em;
     padding: 10px;
     margin: 10px;
     width: 300px;
     border: 1px solid #75231F;
+    color: #777;
 }
+
+
+/* BUTTON STYLES */
 
 .mainbtn {
     background-color: #8e2b2b;
@@ -167,4 +171,18 @@ a:hover {
     border: 2px solid #e4bc4c;
     background-color: #FFCC33;
     color: #333;
+}
+
+#dashsignout {
+    margin-top: -5px;
+}
+
+
+/* TOOL TIP SETTINGS */
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background: #FFCC33;
+    border-radius: 18px;
 }

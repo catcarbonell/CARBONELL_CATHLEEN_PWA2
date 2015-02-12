@@ -38,19 +38,30 @@
             <img src="images/logo2.png" id="logo" />
             <h1>Registration</h1>
             <ul>
+                <li>
+                    <h3><label for="useremail">Email</label></h3>
+                </li>
 
-                <li><input type="email" name="useremail" value="email" class="signin" autofocus required /></li>
+                <li><input type="email" name="useremail" id="useremail" value="name@domain.com" class="formbox" autofocus required /></li>
 
-                <li><input type="text" name="realname" value="name" class="signin" /></li>
+                <li>
+                    <h3><label for="realname">Name</label></h3>
+                </li>
 
-                <li><input type="text" name="username" value="username" class="signin" autofocus required /></li>
+                <li><input type="text" name="realname" id="realname" value="name" class="formbox" /></li>
+
+                <li>
+                    <h3><label for="username">Username</label></h3>
+                </li>
+
+                <li><input type="text" name="username" id="username" value="username" class="formbox" autofocus required /></li>
 
                 <li>
                     <h3><label for="password">Password</label></h3>
                 </li>
 
                 <li>
-                    <input type="password" name="password" id="password" value="password" class="signin" autofocus required />
+                    <input type="password" name="password" id="password" value="password" class="formbox" autofocus required />
                 </li>
 
 
@@ -58,7 +69,7 @@
                     <h3><label for="retype">Confirm Password</label></h3>
                 </li>
                 <li>
-                    <input type="password" name="retype" id="retype" value="password" class="signin" autofocus required />
+                    <input type="password" name="retype" id="retype" value="password" class="formbox" autofocus required />
                 </li>
 
 
@@ -69,7 +80,7 @@
                     <label for="personal" class="blurb">Personal</label><input type="radio" id="personal" name="type" />
                 </li>
 
-                <li> <input type="checkbox" name="terms" value="terms" autofocus required>I agree to the <a href="/">terms & conditions</a></li>
+                <li><input type="checkbox" name="terms" value="terms" autofocus required>I agree to the <a href="/">terms & conditions</a></li>
 
                 <li><button class="mainbtn" type="submit">Sign up!</button></li>
             </ul>
