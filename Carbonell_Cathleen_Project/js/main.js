@@ -6,6 +6,7 @@
 (function($){
 	/* ======= TOOL TIP ======= */
     //$(document).ready(function(){
+
         $('.masterToolTip').hover(function(){
         //Hover code
         var title= $(this).attr('title');
@@ -20,6 +21,7 @@
         var mousey = e.pageY + 10; //Y coordinates
         $('.tooltip').css({ top: mousey, left: mousex })
     });
+
 //});
 
 	

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9461edf-d022-461b-83b4-24f4f549fe8d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/js/jquery-2.1.3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carbonell_Cathleen_Project/index.html" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css" afterPath="$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CARBONELL_CATHLEEN_PWA2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1981132" vertical-offset="804" max-vertical-offset="1620">
-              <caret line="62" column="230" selection-start-line="62" selection-start-column="230" selection-end-line="62" selection-end-column="230" />
+            <state vertical-scroll-proportion="-12.125" vertical-offset="564" max-vertical-offset="1635">
+              <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -44,18 +41,18 @@
       <file leaf-file-name="registration.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8076923" vertical-offset="1368" max-vertical-offset="1980">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.8461537" vertical-offset="1158" max-vertical-offset="1980">
+              <caret line="92" column="87" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.66" vertical-offset="667" max-vertical-offset="1320">
-              <caret line="60" column="66" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.7262295" vertical-offset="247" max-vertical-offset="1320">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -64,21 +61,9 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.153846" vertical-offset="2338" max-vertical-offset="2985">
-              <caret line="170" column="30" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
+            <state vertical-scroll-proportion="-4.6923075" vertical-offset="2338" max-vertical-offset="2985">
+              <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-2.1.3.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/jquery-2.1.3.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +71,8 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -112,17 +97,17 @@
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project1/css/style.css" />
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project1/registration.html" />
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/js/jquery-2.1.3.min.js" />
+        <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css" />
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js" />
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html" />
-        <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html" />
-        <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css" />
         <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/index.html" />
+        <option value="$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
-    <option name="y" value="214" />
+    <option name="x" value="50" />
+    <option name="y" value="116" />
     <option name="width" value="1252" />
     <option name="height" value="770" />
   </component>
@@ -282,7 +267,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="214" width="1252" height="770" extended-state="0" />
+    <frame x="50" y="116" width="1252" height="770" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -328,20 +313,20 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js">
+    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/jquery-2.1.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.09090909" vertical-offset="0" max-vertical-offset="660">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/jquery-2.1.3.min.js">
+    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -350,32 +335,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.153846" vertical-offset="2338" max-vertical-offset="2985">
-          <caret line="170" column="30" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.66" vertical-offset="667" max-vertical-offset="1320">
-          <caret line="60" column="66" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8076923" vertical-offset="1368" max-vertical-offset="1980">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.6923075" vertical-offset="2338" max-vertical-offset="2985">
+          <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1981132" vertical-offset="804" max-vertical-offset="1620">
-          <caret line="62" column="230" selection-start-line="62" selection-start-column="230" selection-end-line="62" selection-end-column="230" />
+        <state vertical-scroll-proportion="-12.125" vertical-offset="564" max-vertical-offset="1635">
+          <caret line="57" column="82" selection-start-line="57" selection-start-column="82" selection-end-line="57" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8461537" vertical-offset="1158" max-vertical-offset="1980">
+          <caret line="92" column="87" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Carbonell_Cathleen_Project/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7262295" vertical-offset="247" max-vertical-offset="1320">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding />
         </state>
       </provider>
