@@ -22,6 +22,20 @@ body {
     float: right;
 }
 
+/* CONTAINERS */
+
+#container {
+    width: 960px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #efefef;
+}
+
+#reg {
+    width: 960px;
+    margin: 0 auto;
+    background: #efefef;
+}
 
 /* HEADERS */
 
@@ -62,6 +76,7 @@ a:hover {
 }
 
 /* NAV/DASHBOARD */
+
 nav {
     display: inline-block;
     width: 700px;
@@ -89,23 +104,6 @@ nav a:hover {
     width: 250px;
     margin-top: -65px;
 }
-
-
-/* CONTAINERS */
-
-#container {
-    width: 960px;
-    padding: 10px;
-    margin: 0 auto;
-    background: #efefef;
-}
-
-#reg {
-    width: 960px;
-    margin: 0 auto;
-    background: #efefef;
-}
-
 
 
 /* P CLASSES */
