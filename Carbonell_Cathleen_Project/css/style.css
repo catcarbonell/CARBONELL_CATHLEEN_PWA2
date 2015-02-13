@@ -266,6 +266,7 @@ nav a:hover {
     margin: 5px;
 }
 
+
 .inline {
     display: inline-block;
 }
@@ -273,6 +274,11 @@ nav a:hover {
 .myStatus > input[type=radio]{
     display: none;
 }
+
+
+/*.myStatus > input[type=radio] + img{
+    opacity: 0.5;
+}*/
 
 .myStatus > input[type=radio]:checked + img {
     cursor: pointer;

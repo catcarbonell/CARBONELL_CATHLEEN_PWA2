@@ -97,6 +97,18 @@
         $('#overlay').toggleClass('hide').fadeOut('slow');
    });
 
+    // Status Fades
+    $('.myStatus').mouseover(function(e){
+        e.preventDefault();
+        $(this).fadeTo(100, 1);
+
+        $(this).mouseout(function(e){
+            e.preventDefault();
+            $(this).fadeTo(100, 0.5);
+
+        });
+    });
+
     /* ======= NOTES SLIDESHOW ======= */
 
     $("#notes > div:gt(0)").hide();
