@@ -40,7 +40,7 @@
             <li><a href="dashboard.html">dashboard</a></li>
             <li><h2>projects</h2></li>
             <li><a href="#tasks">tasks</a></li>
-            <li><a href="#user">users</a></li>
+            <li><a href="#team">team</a></li>
         </ul>
     </nav>
     <div id="userinfo" class="right">
@@ -53,9 +53,96 @@
 
     </div>
 
+    <div class="clear">
 
-    <h2 class="clear"><a href="#">+ Add Project</a></h2>
+        <a href="#" class="modalClick"><button class="mainbtn">+ Add Project</button></a>
 
+        <div id="projectlist">
+            <h1>Current Projects</h1>
+        </div>
+
+        <div id="projects">
+
+        </div>
+
+    </div>
+
+    <div id="overlay" class="hide">
+
+        <div id="modal" class="info">
+
+            <span class="close">x close</span>
+
+            <h1>Add Project</h1>
+
+            <div id="add">
+
+                <form id="addForm">
+
+                    <ul>
+                        <li>
+                            <label for="projectName"><h3>Project Name</h3></label>
+                            <input name="projectName" type="text" id="projectName" class="formbox" />
+                        </li>
+
+                        <li>
+                            <label for="projectDescription"><h3>Description</h3></label>
+                            <input name="projectDescription" type="text" id="projectDescription" class="formbox" />
+                        </li>
+
+                        <li>
+                            <label for="projectDueDate"><h3>Due Date</h3></label>
+                            <input name="projectDueDate" type="text" id="projectDueDate" class="formbox" />
+                        </li>
+                        <li>
+                            <h3>Select Status</h3>
+                        </li>
+                        <li class="inline">
+
+                            <label class="myStatus">
+                                <input type="radio" name="status" id="urgent" class="masterToolTip"
+                                title="Urgent" />
+                                <img src="images/urgent.png">
+                            </label>
+                        </li>
+
+                        <li class="inline">
+                            <label class="myStatus">
+                                <input type="radio" name="status" id="normal" class="masterToolTip"
+                                title="Normal" />
+                                <img src="images/incomplete.png">
+                            </label>
+                        </li>
+
+                        <li class="inline">
+                            <label class="myStatus">
+                                <input type="radio" name="status" id="delayed" class="masterToolTip"
+                                title="Delayed" />
+                                <img src="images/delayed.png">
+                            </label>
+                        </li>
+
+                        <li class="inline">
+                            <label class="myStatus">
+                                <input type="radio" name="status" id="completed" class="masterToolTip"
+                                title="Completed" />
+                                <img src="images/completed.png">
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="button" name="addButton" class="mainbtn" value="Add Project"/>
+                        </li>
+
+                    </ul>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
