@@ -88,13 +88,13 @@
     $('#overlay').hide();
     $('a.modalClick').click(function(e) {
         e.preventDefault();
-        $('#overlay').toggleClass('hide').fadeToggle('fast');
+        $('#overlay').toggleClass('hide').fadeIn('fast');
     });
 
     // Closes Modal
    $('.close').on('click', function(e){
         e.preventDefault();
-        $('#overlay').toggleClass('hide').fadeOut('fast');
+        $('#overlay').toggleClass('hide').fadeOut('slow');
    });
 
 	
