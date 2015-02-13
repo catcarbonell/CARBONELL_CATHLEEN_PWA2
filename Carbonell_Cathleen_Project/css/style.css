@@ -225,6 +225,7 @@ nav a:hover {
 
 .info {
     width: 600px;
+    height: 200px;
     margin: 10px auto;
     padding: 20px;
     background-color: #fff;
@@ -255,6 +256,11 @@ nav a:hover {
     overflow: hidden;
     position: relative;
     z-index: 1001;
+    width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px;
 
 }
 
