@@ -19,7 +19,7 @@
    }).mousemove(function(e) {
         var mousex = e.pageX + 20; //X coordinates
         var mousey = e.pageY + 10; //Y coordinates
-        $('.tooltip').css({ top: mousey, left: mousex })
+        $('.tooltip').css({ top: mousey, left: mousex})
    });
 
    /* ======= TABBED ACCORDION ======= */
@@ -97,6 +97,18 @@
         $('#overlay').toggleClass('hide').fadeOut('slow');
    });
 
+    /* ======= NOTES SLIDESHOW ======= */
+
+    $("#notes > div:gt(0)").hide();
+
+    setInterval(function() {
+        $('#notes > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+    },  3000);
 	
 })(jQuery); // end private scope
 
