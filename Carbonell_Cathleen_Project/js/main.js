@@ -121,7 +121,34 @@
             .end()
             .appendTo('#slideshow');
     },  3000);
-	
+
+
+    /* ======= LOGIN (AJAX/JSON) ======= */
+
+    $('signinButton').on('click', function(e){
+        e.preventDefault();
+        var user = $('#user').val();
+        var pass = $('#pass').val();
+
+        $.ajax({
+            url :'xhr/login.php',
+            type: 'post',
+            dataType: 'json',
+            data : {
+                username: user,
+                password: pass
+            },
+            success : function(response) {
+                console.log('test');
+                if(response.error){
+                    alert.(response.error)
+                }else{
+                    window.location.assign('dashboard.html');
+                }
+            }
+        })
+    })
+
 })(jQuery); // end private scope
 
 
