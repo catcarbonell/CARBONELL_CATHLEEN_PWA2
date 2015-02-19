@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--Your Name 
+	Date
+    Month
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Weather API</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<style>
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#9ED6FF;
+}
+
+#container{
+	width: 90%;
+	margin: 0 auto;
+	height: 600px;
+}
+
+.left {
+	width: 35%;
+	padding: 5%;
+	float: left;
+}
+
+.right {
+	width: 45%;
+	padding: 2%;
+	float: right;
+}
+
+h1 {
+	text-align: center;
+	padding: 2%;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div id="container">
+<header> 
+	<h1>Weather Underground API</h1>
+</header>
+
+<div class="left">
+<h2> Current Forecast </h2>
+<p class="current">
+<!-- Current Forecast/Example -->
+
+<h2>Your Three Day Forecast Summary</h2>
+<p class="three">
+<!--1. Display the three day Forecast Summary here-->
+</p>
+<h2>Your 10-day forecast summary</h2>
+<p class="tenDay">
+<!--2. Display the 10-day forecast summary feature here-->
+</p>
+</div><!--Closes Leftr-->
+
+
+
+<div class="right">
+
+<h2>Your Hourly 1-day forecast</h2>
+<p class="hour">
+<!--3. Display the Hourly 1-day forecast feature here-->
+
+
+</p>
+
+<h2>Your Astronomy Summary</h2>
+<p class="astro">
+<!--4. Display the WU Astronomy feature here-->
+</p>
+
+<h2>Your Almanac for today</h2>
+<p class="almanac">
+<!--5. Display the Almanac for today feature here-->
+</p>
+</div><!--Closes Right-->
+</div><!--Closes Container-->
+
+
+<!--Link to jQuery Library-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+<script>
+
+$(document).ready(function($){
+	
+<!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
+	$.ajax({ 
+		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/geolookup/conditions/q/CA/San_Francisco.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".current").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+	});
+});  //Closes Doc Ready Function
+
+	
+<!--Use your own API key and city location-->
+
+<!--1.Embed the WU 3-day forecast summary feature.-->
+$(document).ready(function($){
+    $.ajax({
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast/q/CA/San_Francisco.json",
+        dataType : "jsonp",
+        success : function(parsed_json) {
+            var forecast = parsed_json['forecast']['txt_forecast']['forecastday'];
+
+            for (index in forecast) {
+                var newForecastString = 'Weather forecast for ' + forecast[index]['title'] + ' is ' + forecast[index]['fcttext_metric'];
+                var newForecastParagraph = $('<p/>').text(newForecastString);
+                $(".three").append(newForecastParagraph);
+            } 
+        }
+    }); 
+}); 
+
+
+<!--2.Embed the WU 10-day forecast summary feature.-->	
+$(document).ready(function($){
+    $.ajax({
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast10day/q/CA/San_Francisco.json",
+        dataType : "jsonp",
+        success : function(parsed_json) {
+            var forecast = parsed_json['forecast']['txt_forecast']['forecastday'];
+
+            for (index in forecast) {
+                var newForecastString = 'Weather forecast for ' + forecast[index]['title'] + ' is ' + forecast[index]['fcttext_metric'];
+                var newForecastParagraph = $('<p/>').text(newForecastString);
+                $(".tenDay").append(newForecastParagraph);
+            } 
+        }
+    }); 
+}); 
+	
+
+<!--3.Embed the WU Hourly 1-day forecast feature.-->	
+
+$(document).ready(function($){
+    $.ajax({
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/hourly/q/CA/San_Francisco.json",
+        dataType : "jsonp",
+        success : function(parsed_json) {
+            var forecast = parsed_json['hourly_forecast'];
+			
+			for(index in forecast) {
+            	var newForecastString = forecast[index]['FCTTIME']['hour'] + ':' + forecast[index]['FCTTIME']['min'] + ' is ' + forecast[index]['condition'];
+            	var newpara = $('<p/>').text(newForecastString);
+            	
+            	$(".hour").append(newpara);
+        	}
+    }
+   })  
+}); 
+
+
+<!--4.Embed the WU Astronomy feature.-->	
+
+$(document).ready(function($){
+	
+	$.ajax({ 
+		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/astronomy/q/CA/San_Francisco.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+          
+              var moonPercent = parsed_json['moon_phase']['percentIlluminated']; 
+              var moonPhase = parsed_json['moon_phase']['phaseofMoon'];
+              var sunriseHour = parsed_json['sun_phase']['sunrise']['hour'];
+              var sunriseMin = parsed_json['sun_phase']['sunrise']['minute'];
+              var sunsetHour = parsed_json['sun_phase']['sunset']['hour'];
+              var sunsetMin = parsed_json['sun_phase']['sunset']['minute'];
+              var curHour = parsed_json['moon_phase']['current_time']['hour'];
+              var curMin = parsed_json['moon_phase']['current_time']['minute'];
+              
+              //print
+                  $(".astro").html("Moon Phase: " + moonPercent + "% " + moonPhase + '<br>' +
+                  "Sunrise: " + sunriseHour + ":" + sunriseMin + '<br>' +
+                  "Sunset: " + sunsetHour + ":" + sunsetMin + '<br>' +
+                  'Current Time:'  + curHour + ":" + curMin);
+                  
+          } //Close parsed_json
+	}); // Close .ajax
+});  //Closes Doc Ready Function
+
+	
+
+<!--5.Embed the WU Almanac for today feature.-->	
+
+$(document).ready(function($){
+	$.ajax({
+	url :"http://api.wunderground.com/api/9aa396bc20bda3a5/almanac/q/CA/San_Francisco.json",
+	dataType: "jsonp",
+	success : function(parsed_json) {
+		var airport_code = parsed_json['almanac']['airport_code'];
+		var temp_norm_high_f = parsed_json['almanac']['temp_high']['normal']['F'];
+		var temp_norm_high_c = parsed_json['almanac']['temp_high']['normal']['C'];
+		var temp_rec_high_f = parsed_json['almanac']['temp_high']['record']['F'];
+		var temp_rec_high_c = parsed_json['almanac']['temp_high']['record']['C'];
+		var temp_rec_high_year = parsed_json['almanac']['temp_high']['recordyear'];
+		var temp_norm_low_f = parsed_json['almanac']['temp_low']['normal']['F'];
+		var temp_norm_low_c = parsed_json['almanac']['temp_low']['normal']['C'];
+		var temp_rec_low_f = parsed_json['almanac']['temp_low']['record']['F'];
+		var temp_rec_low_c = parsed_json['almanac']['temp_low']['record']['C'];	
+		var temp_rec_low_year = parsed_json['almanac']['temp_low']['recordyear'];
+		
+		//print
+		$(".almanac").html("Airport Code: " + airport_code + '<br>' 
+		+ "Average High Temp: " + temp_norm_high_f + "ºF / " + temp_norm_high_c + "ºC" + '<br>'
+		+ "Record High Temp: " + temp_rec_high_year + " " + temp_rec_high_f+ "ºF / " + temp_rec_high_c + "ºC" + '<br>'
+		
+		+ "Average Low Temp: " + temp_norm_low_f + "ºF / " + temp_norm_low_c + "ºC" + '<br>'
+		+ "Record Low Temp: " + temp_rec_low_year + " " + temp_rec_low_f + "ºF / " + temp_rec_low_c + "ºC" + '<br>');
+	}
+	
+	}); // Close parsed_json
+}); // Close doc.ready
+
+</script>
+
+
+	
+
+
+	
+
+
+
+</body>
+</html>
