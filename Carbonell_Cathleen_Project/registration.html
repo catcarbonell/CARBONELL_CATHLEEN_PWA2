@@ -34,23 +34,30 @@
 <body>
     <div id="container">
 
-        <form method="get" id="reg">
+        <form id="reg">
             <img src="images/logo2.png" id="logo" />
             <h1>Registration</h1>
             <ul>
                 <li>
-                    <h3><label for="useremail">Email</label></h3>
+                    <h3><label for="email">Email</label></h3>
                 </li>
 
-                <li><input type="email" name="useremail" id="useremail" value="name@domain.com" class="formbox masterToolTip"
+                <li><input type="email" name="email" id="email" value="name@domain.com" class="formbox masterToolTip"
                      title="Enter your email address! Promise we won't spam." autofocus required /></li>
 
                 <li>
-                    <h3><label for="realname">Name</label></h3>
+                    <h3><label for="first">First Name</label></h3>
                 </li>
 
-                <li><input type="text" name="realname" id="realname" value="name" class="formbox masterToolTip"
-                    title="Enter your real name! First, Last. Or just First."/></li>
+                <li><input type="text" name="first" id="first" value="name" class="formbox masterToolTip"
+                    title="Enter your real first name!"/></li>
+
+                <li>
+                    <h3><label for="last">Last Name</label></h3>
+                </li>
+
+                <li><input type="text" name="last" id="last" value="name" class="formbox masterToolTip"
+                           title="Enter your real surname!"/></li>
 
                 <li>
                     <h3><label for="username">Username</label></h3>
@@ -70,10 +77,10 @@
 
 
                 <li>
-                    <h3><label for="retype">Confirm Password</label></h3>
+                    <h3><label for="confirm">Confirm Password</label></h3>
                 </li>
                 <li>
-                    <input type="password" name="retype" id="retype" value="password" class="formbox masterToolTip"
+                    <input type="password" name="confirm" id="confirm" value="password" class="formbox masterToolTip"
                     title="Just making sure you *really* want to use that password." autofocus required />
                 </li>
 
@@ -90,7 +97,7 @@
                 <li><input type="checkbox" id="terms" name="terms" value="terms" class="masterToolTip"
                     title="Please click this box for legal reasons." autofocus required /><label for="terms">I agree to the <a href="/">terms & conditions</a></label></li>
 
-                <li><button class="mainbtn masterToolTip" type="submit" title="Welcome!">Sign up!</button></li>
+                <li><button class="mainbtn masterToolTip" id="register" title="Welcome!">Sign up!</button></li>
             </ul>
         </form>
 

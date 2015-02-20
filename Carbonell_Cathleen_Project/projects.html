@@ -47,9 +47,9 @@
 
         <img src="images/profile.png" id="profilepic" class="left clear">
 
-        <h2 class="left">Welcome, username</h2>
+        <h2 class="left userid">Welcome, </h2>
 
-        <input type="button" id="dashsignout" class="menubtn right masterToolTip" value="sign out" title="See you later!" />
+        <input type="button" id="logout" class="menubtn right masterToolTip" value="sign out" title="See you later!" />
 
     </div>
 
@@ -57,11 +57,11 @@
 
         <a href="#" class="modalClick"><button class="mainbtn">+ Add Project</button></a>
 
-        <div id="projectlist" class="info">
+        <div id="projectlist" class="projectbox">
             <h1>Current Projects</h1>
         </div>
 
-        <div id="projects">
+        <div class="projects">
 
         </div>
 
@@ -127,7 +127,7 @@
                         </li>
 
                         <li>
-                            <input type="button" name="addButton" class="mainbtn right" value="Add Project"/>
+                            <input type="button" name="addButton" id="addButton" class="mainbtn right" value="Add Project"/>
                         </li>
 
                         <li class="clear hide"></li>
@@ -156,7 +156,10 @@
 
 
 <!-- main -->
+
+
 <script type="text/javascript" src="js/main.js"></script>
+
 
 </body>
 </html>

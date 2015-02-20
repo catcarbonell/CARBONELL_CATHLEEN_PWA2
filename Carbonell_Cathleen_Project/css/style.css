@@ -220,7 +220,6 @@ nav a:hover {
 }
 
 
-
 /* TABBED ACCORDION */
 
 .info {
@@ -230,6 +229,17 @@ nav a:hover {
     padding: 20px;
     background-color: #fff;
     border-radius: 18px;
+}
+
+.projectbox {
+    width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px;
+    font-family: Jura, Arial, sans-serif;
+    color: #333;
+    font-size: 1.2em;
 }
 
 .hide {
