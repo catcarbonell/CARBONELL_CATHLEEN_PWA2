@@ -5,6 +5,7 @@
 
 (function($){
     //$(document).ready(function(){
+
     /* ======= TOOL TIP ======= */
 
     $('.masterToolTip').hover(function(){
@@ -104,31 +105,39 @@
 
     /* ======= LOGIN (AJAX/JSON) ======= */
 
-    $('signinButton').on('click', function(e){
+    $('#signinButton').on('click', function(e){
+        // alert('testing');
+
         e.preventDefault();
+
         var user = $('#user').val();
         var pass = $('#pass').val();
 
         $.ajax({
-            url :'xhr/login.php',
+
+            url : 'xhr/login.php',
             type: 'post',
             dataType: 'json',
             data : {
                 username: user,
                 password: pass
             },
+
             success : function(response) {
-                console.log('test');
+
                 if(response.error){
-                    //alert.(response.error);
+                    alert.('Login failed. Try again.');
                     console.log('error')
                 }else{
                     window.location.assign('dashboard.html');
-                    console.log('test');
                 }
             }
-        })
-    })
+        });
+    });
+
+    /* ======= LOGOUT ======= */
+
+    
 
 })(jQuery); // end private scope
 
