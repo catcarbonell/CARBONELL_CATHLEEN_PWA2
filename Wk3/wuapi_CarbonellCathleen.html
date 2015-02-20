@@ -93,11 +93,16 @@ h1 {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
 <script>
 
+var state = "CA";
+var city = "San_Francisco";
+
 $(document).ready(function($){
+
+
 	
 <!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
 	$.ajax({ 
-		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/geolookup/conditions/q/CA/San_Francisco.json",
+		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/geolookup/conditions/q/" + state + "/" + city + ".json",
 		dataType : "jsonp", 
           success : function(parsed_json) { 
               var location = parsed_json['location']['city']; 
@@ -113,7 +118,7 @@ $(document).ready(function($){
 <!--1.Embed the WU 3-day forecast summary feature.-->
 $(document).ready(function($){
     $.ajax({
-        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast/q/CA/San_Francisco.json",
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast/q/" + state + "/" + city + ".json",
         dataType : "jsonp",
         success : function(parsed_json) {
             var forecast = parsed_json['forecast']['txt_forecast']['forecastday'];
@@ -132,7 +137,7 @@ $(document).ready(function($){
 <!--2.Embed the WU 10-day forecast summary feature.-->	
 $(document).ready(function($){
     $.ajax({
-        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast10day/q/CA/San_Francisco.json",
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/forecast10day/q/" + state + "/" + city + ".json",
         dataType : "jsonp",
         success : function(parsed_json) {
             var forecast = parsed_json['forecast']['txt_forecast']['forecastday'];
@@ -151,7 +156,7 @@ $(document).ready(function($){
 
 $(document).ready(function($){
     $.ajax({
-        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/hourly/q/CA/San_Francisco.json",
+        url: "http://api.wunderground.com/api/9aa396bc20bda3a5/hourly/q/"+ state + "/" + city + ".json",
         dataType : "jsonp",
         success : function(parsed_json) {
             var forecast = parsed_json['hourly_forecast'];
@@ -172,7 +177,7 @@ $(document).ready(function($){
 $(document).ready(function($){
 	
 	$.ajax({ 
-		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/astronomy/q/CA/San_Francisco.json",
+		url : "http://api.wunderground.com/api/9aa396bc20bda3a5/astronomy/q/" + state + "/" + city + ".json",
 		dataType : "jsonp", 
           success : function(parsed_json) { 
           
@@ -201,7 +206,7 @@ $(document).ready(function($){
 
 $(document).ready(function($){
 	$.ajax({
-	url :"http://api.wunderground.com/api/9aa396bc20bda3a5/almanac/q/CA/San_Francisco.json",
+	url :"http://api.wunderground.com/api/9aa396bc20bda3a5/almanac/q/"+ state + "/" + city + ".json",
 	dataType: "jsonp",
 	success : function(parsed_json) {
 		var airport_code = parsed_json['almanac']['airport_code'];
