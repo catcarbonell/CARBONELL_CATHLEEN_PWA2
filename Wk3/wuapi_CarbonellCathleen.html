@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--Your Name 
-	Date
-    Month
+<!-- Cathleen Carbonell
+	February 2015
+
 -->
 <html>
 <head>
@@ -70,7 +70,7 @@ h1 {
 <div class="right">
 
 <h2>Your Hourly 1-day forecast</h2>
-<p class="hour">
+<p class="hourFore">
 <!--3. Display the Hourly 1-day forecast feature here-->
 
 
@@ -122,10 +122,11 @@ $(document).ready(function($){
                 var newForecastString = 'Weather forecast for ' + forecast[index]['title'] + ' is ' + forecast[index]['fcttext_metric'];
                 var newForecastParagraph = $('<p/>').text(newForecastString);
                 $(".three").append(newForecastParagraph);
-            } 
-        }
-    }); 
-}); 
+           
+            }  //Close for loop
+        } // Close parsed_json
+    });  // Close ajax
+}); //Close doc.ready
 
 
 <!--2.Embed the WU 10-day forecast summary feature.-->	
@@ -159,7 +160,7 @@ $(document).ready(function($){
             	var newForecastString = forecast[index]['FCTTIME']['hour'] + ':' + forecast[index]['FCTTIME']['min'] + ' is ' + forecast[index]['condition'];
             	var newpara = $('<p/>').text(newForecastString);
             	
-            	$(".hour").append(newpara);
+            	$(".hourFore").append(newpara);
         	}
     }
    })  

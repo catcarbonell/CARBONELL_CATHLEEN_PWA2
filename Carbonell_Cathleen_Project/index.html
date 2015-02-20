@@ -59,10 +59,10 @@
 
             <h2>Got an account already?</h2>
             <form action="submit">
-                <input type="text" id="user" value="username" class="formbox masterToolTip" title="Not your email address!" autofocus required />
-                <input type="password" id="pass" value="password" class="formbox masterToolTip" title="You shall not pass! I mean, unless you actually do remember your password. If not, click the link over to the right of the Sign In button!" autofocus required />
+                <input type="text" id="user" name="signinButton" value="username" class="formbox masterToolTip" title="Not your email address!" autofocus required />
+                <input type="password" id="pass" name="signinButton" value="password" class="formbox masterToolTip" title="You shall not pass! I mean, unless you actually do remember your password. If not, click the link over to the right of the Sign In button!" autofocus required />
 
-                <input type="button" class="mainbtn masterToolTip" id="signinButton" value="Sign In" title="Welcome back!"/>
+                <button class="mainbtn masterToolTip" name="signinButton" id="signinButton" value="Sign In" title="Welcome back!">Sign In</button>
 
                 <a href="/">Forgot username or password?</a>
 
@@ -82,7 +82,6 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<!-- plugins -->
 
 	

@@ -24,27 +24,6 @@
 
    /* ======= TABBED ACCORDION ======= */
 
-   /* $('#tabs p').hide().eq(0).show();
-    $('#tabs p:not(:first)').hide();
-
-    $('#tabsnav li').click(function(e) {
-        //$('#projects').hide();
-        e.preventDefault();
-        $('#tabs p').hide();
-
-        $('#tabsnav .current').removeClass("current");
-        $(this).addClass('current');
-        var clicked = $(this).find('a:first').attr('href');
-
-        $('#tabs ' + clicked).fadeIn('fast');
-    }).eq(0).addClass('current'); */
-
-   /* $('div.info').hide();
-   $('li.title').click(function() {
-        $('div.info').toggleClass('hide').slideToggle('fast');
-    });
-    });*/
-
    $('ul.tabs').each(function(){
        // For each set of tabs, we want to keep track of
        // which tab is active and it's associated content
@@ -141,9 +120,11 @@
             success : function(response) {
                 console.log('test');
                 if(response.error){
-                    alert.(response.error)
+                    //alert.(response.error);
+                    console.log('error')
                 }else{
                     window.location.assign('dashboard.html');
+                    console.log('test');
                 }
             }
         })
