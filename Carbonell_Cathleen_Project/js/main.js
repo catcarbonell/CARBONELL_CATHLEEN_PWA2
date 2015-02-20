@@ -119,68 +119,11 @@
         })
     });
 
-    /* ======= DISPLAY PROJECT ====== */
+     //projects();
 
-    var projects = function(){
+    //if(/.+projects.htm.*/i.test(window.location.valueOf())){projects();}
 
-        $.ajax({
-            url : "xhr/get_projects.php",
-            type : "get",
-            dataType : "json",
-            success : function(response){
-                if(response.error){
-                    alert(response.error);
-                }else{
-                    for(var i= 0, j=response.projects.length; i<j; i++){
-                        var result = response.projects[i];
 
-                    $('.projects').append(
-                        '<div class="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
-                        + "Project Name: " + result.projectName + '<br />' +
-                        "Project Description: " + result.projectDescription + '<br />' +
-                        "Project Status: " + result.status + '<p />' +
-
-                        '<button class="menubtn deletebtn">Delete</button>' + ' ' +
-                        '<button class="menubtn editbtn">Edit</button>' +
-                         '</div>' + '<br />'
-                    ); //Close append
-                } //Close If/Else
-
-                // DELETE BTN
-
-                $('.deletebtn').on('click', function(e){
-
-                    e.preventDefault();
-                    var projectid = $("#projectid").val();
-
-                    console.log('deleted.');
-
-                    $.ajax({
-                        url : "xhr/delete_project.php",
-                        data : {
-                            projectID: projectid //calls individual project id rather than last
-                        },
-                        type : "post",
-                        dataType: "json",
-                        success : function(response){
-                            if(response.error){
-                                alert(response.error);
-                            }else{
-                                window.location.assign("projects.html")
-                            } // Close Else
-                        } // Close success
-                    }); // Close ajax
-                }); // Close .deletebtn
-
-                } // Close projects for loop
-            } // Close response
-        }); // Close AJAX
-        return false
-    }; //Close projects fn
-
-    //projects();
-
-    if(/.+projects.htm.*/i.test(window.location.valueOf())){projects();}
 
     /* ======= NOTES SLIDESHOW ======= */
 
@@ -285,12 +228,65 @@
 
     });
 
-
-
-
-
 })(jQuery); // end private scope
 
 
 
+/* ======= DISPLAY PROJECT ====== */
 
+var projects = function(){
+
+    $.ajax({
+        url : "xhr/get_projects.php",
+        type : "get",
+        dataType : "json",
+        success : function(response){
+            if(response.error){
+                alert(response.error);
+            }else{
+                for(var i= 0, j=response.projects.length; i<j; i++){
+                    var result = response.projects[i];
+
+                    $('.projects').append(
+                            '<div class="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
+                            + "Project Name: " + result.projectName + '<br />' +
+                            "Project Description: " + result.projectDescription + '<br />' +
+                            "Project Status: " + result.status + '<p />' +
+
+                            '<button class="menubtn deletebtn">Delete</button>' + ' ' +
+                            '<button class="menubtn editbtn">Edit</button>' +
+                            '</div>' + '<br />'
+                    ); //Close append
+                } //Close If/Else
+
+                // DELETE BTN
+
+                $('.deletebtn').on('click', function(e){
+
+                    e.preventDefault();
+                    var projectid = $("#projectid").val();
+
+                    console.log('deleted.');
+
+                    $.ajax({
+                        url : "xhr/delete_project.php",
+                        data : {
+                            projectID: projectid //calls individual project id rather than last
+                        },
+                        type : "post",
+                        dataType: "json",
+                        success : function(response){
+                            if(response.error){
+                                alert(response.error);
+                            }else{
+                                window.location.assign("projects.html")
+                            } // Close Else
+                        } // Close success
+                    }); // Close ajax
+                }); // Close .deletebtn
+
+            } // Close projects for loop
+        } // Close response
+    }); // Close AJAX
+    return false
+}; //Close projects fn
