@@ -308,6 +308,15 @@ nav a:hover {
     padding: 7px;
 }
 
+
+.ui-datepicker {
+    width: 216px;
+    height: auto;
+    margin: 5px auto 0;
+    font: 9pt Arial, sans-serif;
+    background-color: #fff;
+}
+
 /* PROJECTS SLIDESHOW */
 
 #notes {

@@ -233,6 +233,10 @@
 
     });
 
+    /* ======= DATE PICKER ======= */
+
+    $( ".datepick" ).datepicker();
+
     /* ======= FORM VALIDATION ====== */
     // PASSWORD
 
@@ -279,6 +283,7 @@ var projects = function(){
                             '<div id="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
                             + "Project Name: " + result.projectName + '<br />' +
                             "Project Description: " + result.projectDescription + '<br />' +
+                            "Due Date: " + result.dueDate + '<br />' +
                             "Project Status: " + result.status + '<p />' +
 
                             '<button class="menubtn deletebtn">Delete</button>' + ' ' +
