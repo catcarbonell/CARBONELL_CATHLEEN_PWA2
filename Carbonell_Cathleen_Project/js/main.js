@@ -228,7 +228,30 @@
 
     });
 
+    /* ======= FORM VALIDATION ====== */
+    // PASSWORD
+
+    jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+    });
+
+    $("#reg").validate({
+
+        rules: {
+            password: {
+                minlength: 6 },
+
+            confirm_password: {
+
+                equalTo:  "#password" }
+        }
+    });
+
 })(jQuery); // end private scope
+
+
+
 
 
 
