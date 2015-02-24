@@ -123,6 +123,11 @@
 
     //if(/.+projects.htm.*/i.test(window.location.valueOf())){projects();}
 
+    /* ====== DRAG & DROP (jQUERY UI) ====== */
+
+
+    $( "#projects").sortable();
+
 
 
     /* ======= NOTES SLIDESHOW ======= */
@@ -270,8 +275,8 @@ var projects = function(){
                 for(var i= 0, j=response.projects.length; i<j; i++){
                     var result = response.projects[i];
 
-                    $('.projects').append(
-                            '<div class="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
+                    $('#projects').append(
+                            '<div id="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
                             + "Project Name: " + result.projectName + '<br />' +
                             "Project Description: " + result.projectDescription + '<br />' +
                             "Project Status: " + result.status + '<p />' +

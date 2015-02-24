@@ -231,7 +231,7 @@ nav a:hover {
     border-radius: 18px;
 }
 
-.projectbox {
+#projectbox {
     width: 600px;
     margin: 10px auto;
     padding: 20px;
@@ -240,6 +240,10 @@ nav a:hover {
     font-family: Jura, Arial, sans-serif;
     color: #333;
     font-size: 1.2em;
+}
+
+#projects li {
+    list-style: none;
 }
 
 .hide {
