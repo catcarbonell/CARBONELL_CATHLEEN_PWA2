@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="css/style.css?v=1">
     <!-- end CSS-->
 
+
+
 </head>
 
 <body>
@@ -39,8 +41,6 @@
         <ul>
             <li><a href="dashboard.html">dashboard</a></li>
             <li><h2>projects</h2></li>
-            <li><a href="#tasks">tasks</a></li>
-            <li><a href="#team">team</a></li>
         </ul>
     </nav>
     <div id="userinfo" class="right">
@@ -57,15 +57,17 @@
 
         <a href="#" class="modalClick"><button class="mainbtn">+ Add Project</button></a>
 
+
         <div id="projectlist">
             <h1>Current Projects</h1>
 
 
-            <div id="projects">
+
+            <ul id="projects">
 
                 <input type="hidden" id="loadprojects" />
 
-            </div>
+            </ul>
 
         </div>
 
@@ -96,7 +98,7 @@
 
                         <li>
                             <label for="projectDueDate"><h3>Due Date</h3></label>
-                            <input name="projectDueDate" type="text" id="projectDueDate" class="datepick formbox" />
+                            <input name="projectDueDate" type="datetime" id="projectDueDate" class="datepick formbox" />
                         </li>
                         <li>
                             <h3>Select Status</h3>
@@ -160,15 +162,22 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <!-- plugins -->
-<script src="js/plugins/jquery-validation-1.13.1"></script>
+
+<!-- validation -->
+<!--<script src="js/plugins/jquery-validation-1.13.1"></script>-->
 <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
-<script type="text/javascript" src="js/plugins/jquery-ui-1.11.3.custom"></script>
+<!-- jQuery UI -->
+<!--<script type="text/javascript" src="js/plugins/jquery-ui-1.11.3.custom"></script>-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+
+
 
 <!-- main -->
 <script type="text/javascript" src="js/main.js"></script>
+
 
 <script>
     projects();

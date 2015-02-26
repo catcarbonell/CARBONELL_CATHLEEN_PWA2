@@ -9,7 +9,7 @@
 
     /* ======= TOOL TIP ======= */
 
-    $('.masterToolTip').hover(function(){
+   $('.masterToolTip').hover(function(){
         //Hover code
         var title= $(this).attr('title');
         $(this).data('tipText', title).removeAttr('title');
@@ -47,7 +47,7 @@
         $(this).on('click', 'a', function(e){
             // Make the old tab inactive.
             $active.removeClass('active');
-            $content.hide();
+            $content.hide('puff');
 
             // Update the variables with the new link and content
             $active = $(this);
@@ -55,12 +55,12 @@
 
             // Make the tab active.
             $active.addClass('active');
-            $content.show();
+            $content.show('puff');
 
             // Prevent the anchor's default click action
             e.preventDefault();
         });
-    });
+   });
 
    /* ======= MODAL POPUP ======= */
 
@@ -125,9 +125,7 @@
 
     /* ====== DRAG & DROP (jQUERY UI) ====== */
 
-
     $( "#projects").sortable();
-
 
 
     /* ======= NOTES SLIDESHOW ======= */
@@ -142,6 +140,7 @@
             .end()
             .appendTo('#slideshow');
     },  3000);
+
 
 
     /* ======= LOGIN (AJAX/JSON) ======= */
@@ -227,6 +226,8 @@
                     window.location.assign('projects.html');
                 }
 
+
+
             }
 
         });
@@ -236,6 +237,8 @@
     /* ======= DATE PICKER ======= */
 
     $( ".datepick" ).datepicker();
+
+
 
     /* ======= FORM VALIDATION ====== */
     // PASSWORD
@@ -255,46 +258,44 @@
 
                 equalTo:  "#password" }
         }
+
     });
 
 })(jQuery); // end private scope
 
 
 
-
-
-
 /* ======= DISPLAY PROJECT ====== */
 
-var projects = function(){
+var projects = function() {
 
     $.ajax({
-        url : "xhr/get_projects.php",
-        type : "get",
-        dataType : "json",
-        success : function(response){
-            if(response.error){
+        url: "xhr/get_projects.php",
+        type: "get",
+        dataType: "json",
+        success: function (response) {
+            if (response.error) {
                 alert(response.error);
-            }else{
-                for(var i= 0, j=response.projects.length; i<j; i++){
+            } else {
+                for (var i = 0, j = response.projects.length; i < j; i++) {
                     var result = response.projects[i];
 
                     $('#projects').append(
-                            '<div id="projectbox">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
+                            '<li id="projectbox" class="selectable">' + '<input class="projectid" name="projectid" id="projectid" type="hidden" value="' + result.id + '">'
                             + "Project Name: " + result.projectName + '<br />' +
                             "Project Description: " + result.projectDescription + '<br />' +
                             "Due Date: " + result.dueDate + '<br />' +
                             "Project Status: " + result.status + '<p />' +
 
-                            '<button class="menubtn deletebtn">Delete</button>' + ' ' +
+                            '<button class="menubtn deletebtn delete">Delete</button>' + ' ' +
                             '<button class="menubtn editbtn">Edit</button>' +
-                            '</div>' + '<br />'
+                            '</li>' + '<br />'
                     ); //Close append
                 } //Close If/Else
 
                 // DELETE BTN
 
-                $('.deletebtn').on('click', function(e){
+                $('.deletebtn').on('click', function (e) {
 
                     e.preventDefault();
                     var projectid = $("#projectid").val();
@@ -302,24 +303,36 @@ var projects = function(){
                     console.log('deleted.');
 
                     $.ajax({
-                        url : "xhr/delete_project.php",
-                        data : {
+                        url: "xhr/delete_project.php",
+                        data: {
                             projectID: projectid //calls individual project id rather than last
                         },
-                        type : "post",
+                        type: "post",
                         dataType: "json",
-                        success : function(response){
-                            if(response.error){
+                        success: function (response) {
+                            if (response.error) {
                                 alert(response.error);
-                            }else{
+                            } else {
                                 window.location.assign("projects.html")
                             } // Close Else
                         } // Close success
                     }); // Close ajax
+
                 }); // Close .deletebtn
+
+
+                // EDIT BTN
+
+                $('.editbtn').on('click', function (e) {
+
+                    console.log('Edit Button');
+
+                    e.preventDefault();
+
+                });
 
             } // Close projects for loop
         } // Close response
     }); // Close AJAX
-    return false
+    return false;
 }; //Close projects fn

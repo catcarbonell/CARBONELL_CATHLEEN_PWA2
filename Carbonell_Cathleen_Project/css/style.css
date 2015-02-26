@@ -317,6 +317,11 @@ nav a:hover {
     background-color: #fff;
 }
 
+.selectable {
+    background: #FFCC33;
+    color: #fff;
+}
+
 /* PROJECTS SLIDESHOW */
 
 #notes {
